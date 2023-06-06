@@ -1,0 +1,162 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.about__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about__title {
+    font-size: var(--size-2xl);  /* REDUNDANT: for readability when copied */
+    color: var(--clr-light);     /* REDUNDANT: for readability when copied */
+}
+
+.about__description {
+    max-width: 60ch;
+    font-size: var(--size-sm);
+    color: var(--clr-slate600);
+}
+
+.about__hr {
+    border-color: var(--clr-slate800);
+}
+
+.about__subtitle {
+    font-size: var(--size-sm);
+    color: var(--clr-slate400);
+}
+
+.about__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    list-style-type: '\🍎';
+    padding-left: 1em;
+    flex: 1;
+}
+
+.about__ul-container {
+    display: flex;
+}
+
+.about__list {
+    color: var(--clr-slate600);
+    font-size: var(--size-sm); 
+}
+
+/* This pseudoclass ::before is used to give space between the emoji & text. */
+.about__list::before {
+    content: '';
+    margin-left: 0.5em;
+}
+
+/* XS */
+@media (min-width: 475px) {
+
+    .about {
+        gap: 1.5rem;
+    }
+    .about__content {
+        gap: 1.5rem;
+    }
+
+    .about__title {
+        font-size: var(--size-3xl);  /* REDUNDANT: for readability */
+    }
+
+    .about__description {
+        font-size: var(--size-base);
+    }
+
+    .about__subtitle {
+        font-size: var(--size-base);
+    }
+
+    .about__list {
+        font-size: var(--size-base); 
+    }
+}
+
+/* S */
+@media (min-width: 640px) {
+
+    .about__img-wrapper {
+        margin: 0 auto;
+
+        /* NOTE: The flex properties below do the same thing.
+                 HOWEVER, w/ only one element (the image),
+                 there is no need to use flex. */
+
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+    }
+
+    /* (As of May 31, 2023) The below seems to be a redundant effort.
+       Keeping it just in case.
+    */
+    .about__img {
+        width: 28.6875rem;
+    }
+}
+
+/* M */
+/* @media (min-width: 768px) {} */
+
+/* L */
+@media (min-width: 1024px) {
+    .about {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .about__title {
+        font-size: var(--size-4xl);
+    }
+
+    .about__description {
+        font-size: var(--size-lg);
+    }
+
+    .about__subtitle {
+        font-size: var(--size-lg);
+    }
+
+    .about__list {
+        font-size: var(--size-lg); 
+    }
+}
+
+/* XL */
+@media (min-width: 1280px) {
+    .about__content {
+        gap: 2rem;
+    }
+
+    .about__title {
+        font-size: var(--size-5xl);
+    }
+
+    .about__description {
+        font-size: var(--size-xl);
+    }
+
+    .about__subtitle {
+        font-size: var(--size-xl);
+    }
+
+    .about__list {
+        font-size: var(--size-xl); 
+    }
+
+    .about__img {
+        width: 30.75rem;
+    }
+}
+
+/* XXL */
+@media (min-width: 1536px) {}
